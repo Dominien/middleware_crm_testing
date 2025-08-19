@@ -11,7 +11,7 @@ const corsHandler = cors({
   origin: [
     'https://k108---esc-european-speed-club.webflow.io', // Existing domain
     'https://www.european-speed-club.com',     
-    'https://k108---esc-european-speed-5d15a0ed8a9d2.webflow.io',         // New domain
+    'https://sandkasten-esc.webflow.io/',         // New domain
     'https://european-speed-club.com'                   // New domain
   ],
   optionsSuccessStatus: 200
