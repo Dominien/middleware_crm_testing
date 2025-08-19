@@ -8,7 +8,7 @@ const corsHandler = cors({
     'https://k108---esc-european-speed-club.webflow.io', // Existing domain
     'https://www.european-speed-club.com',              // New domain
     'https://european-speed-club.com',
-    'https://sandkasten-esc.webflow.io/'                 // New domain
+    'https://sandkasten-esc.webflow.io'                 // New domain
   ],
   methods: ['POST', 'OPTIONS'],
   optionsSuccessStatus: 200,
