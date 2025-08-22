@@ -1,6 +1,8 @@
 /**
- * sync_full.js  – v3.2 (30 Jun 2025)
+ * sync_full.js  – v3.4 (22 Aug 2025)
  * One-way, full sync from Dynamics CRM → Webflow CMS
+ * - FIXED: Corrected the field slug for the description to 'description-2'.
+ * - ADDED: Sync for the new 'm8_description' field.
  * - FIXED: Now runs reliably as a background task on Vercel Pro.
  * - REMOVED: The initial diagnostic check to google.com is no longer needed.
  * - NOTE: This script is triggered by api/crm-webhook.js, which uses `waitUntil`.
@@ -275,6 +277,7 @@ async function syncFull() {
       const fieldData = {
         name: ev.m8_name,
         slug: slugify(ev.m8_name),
+        'description-3': ev.m8_description, // <-- CORRECTED THIS LINE
         eventid: ev.m8_eventid,
         startdate: ev.m8_startdate,
         enddate: ev.m8_enddate,
